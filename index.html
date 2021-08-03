@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/style.css" />
+    <title>Book Shop</title>
+  </head>
+  <body onload="onInit()">
+    <section class="container">
+      <h1 data-trans="title">Book Shop</h1>
+
+      <select onchange="onSetLang(this.value)">
+           <option value="en">English</option>
+           <option value="he">עברית</option>
+       </select>
+
+      <div class="add-book">
+        <h3 data-trans="add">Add New Book</h3>
+        <input  data-trans="bookInput" name="book-name" type="text" placeholder="Book name" />
+        <input data-trans="priceInput"  name="price" type="number" placeholder="Price" />
+        <input  data-trans="url" name="url" type="url" placeholder="*Url" />
+        <button onclick="onAddBook()">+</button>
+      </div>
+      <table>
+        <tbody></tbody>
+      </table>
+
+      <div class="page-buttons">
+        <button data-trans="prev" class="left-button" onclick="onPrevPage()">prev</button>
+        <p>1</p>
+        <button data-trans="next" class="right-button" onclick="onNextPage()">next</button>
+      </div>
+    </section>
+
+    <div class="book-info">
+      <h2><span>book name</span></h2>
+      <p class="price">Price: <span></span></p>
+      <img src="" alt="" />
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur
+        eum assumenda adipisci atque veritatis omnis eligendi officia corporis
+        repellat ratione soluta, repudiandae voluptas sit accusamus sint
+        similique aliquid provident facilis. Ex voluptas veritatis cumque
+        itaque.
+      </p>
+
+      <button data-trans="goBack" class="go-back" onclick="exitInfo()">Go Back</button>
+      <div class="rate">
+        <button onclick="rateDown(this)">-</button>
+        <p><span></span></p>
+        <button onclick="rateUp(this)">+</button>
+      </div>
+    </div>
+
+    <div class="update-price-modal">
+      <input type="number" name="new-price" id="" />
+      <button data-trans="submit" onclick="onSubmit()">Submit</button>
+    </div>
+
+    <script src="js/i18n-service.js"></script>
+    <script src="js/storage-service.js"></script>
+    <script src="js/utils-service.js"></script>
+    <script src="js/book-service.js"></script>
+    <script src="js/book-controller.js"></script>
+  </body>
+</html>
