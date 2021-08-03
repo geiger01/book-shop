@@ -1,5 +1,5 @@
 # book-shop
-CRUDL Books keeper web app, MVC, Built with vanilla js.
+CRUDL Books keeper web app, MVC, Built with vanilla js and support English and Hebrew
 Live Site: https://geiger01.github.io/book-shop/
 
 Live Site: https://elastic-hoover-3f8c32.netlify.app/
